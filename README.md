@@ -1,27 +1,40 @@
-<h1 align="center">🏥 Desenvolvendo um Banco de Dados para um Hospital</h1>
-<br>
-<p>Um pequeno hospital local busca desenvolver um novo sistema que atenda melhor às suas necessidades. Atualmente, parte da operação ainda se apoia em planilhas e arquivos antigos, mas espera-se que esses dados sejam transferidos para o novo sistema assim que ele estiver funcional. Neste momento, é necessário analisar com cuidado as necessidades desse cliente e sugerir uma estrutura de banco de dados adequada por meio de um Diagrama Entidade-Relacionamento.</p>
-<br>
-<h1 align="center">⚕️ PARTE 1 - O Hospital Fundamental</h1>
-<br>
-<p>O hospital necessita de um sistema para sua área clínica que ajude a controlar consultas realizadas. Os médicos podem ser generalistas, especialistas ou residentes e têm seus dados pessoais cadastrados em planilhas digitais. Cada médico pode ter uma ou mais especialidades, que podem ser pediatria, clínica geral, gastroenterologia e dermatologia. Alguns registros antigos ainda estão em formulário de papel, mas será necessário incluir esses dados no novo sistema.
+# 🏥 Criando um Banco de Dados para um Hospital
 
-Os pacientes também precisam de cadastro, contendo dados pessoais (nome, data de nascimento, endereço, telefone e e-mail), documentos (CPF e RG) e convênio. Para cada convênio, são registrados nome, CNPJ e tempo de carência.
+Um pequeno hospital local busca desenvolver um novo sistema para gerenciar suas operações, transferindo dados antigos armazenados em planilhas para um banco de dados estruturado. O objetivo é criar um **Diagrama Entidade-Relacionamento (DER)** adequado e expandir funcionalidades conforme necessário.
 
-As consultas também têm sido registradas em planilhas, com data e hora de realização, médico responsável, paciente, valor da consulta ou nome do convênio, com o número da carteira. Também é necessário indicar na consulta qual a especialidade buscada pelo paciente.
+## ⚕️🌈 PARTE 1 - O Hospital Fundamental
 
-Deseja-se ainda informatizar a receita do médico, de maneira que, no encerramento da consulta, ele possa registrar os medicamentos receitados, a quantidade e as instruções de uso. A partir disso, espera-se que o sistema imprima um relatório da receita ao paciente ou permita sua visualização via internet.</p>
-
-<br>
+## 📌 Entidades Principais
+- 🩹 **Pacientes**: Dados pessoais, documentos e convênio médico.
+- 🧑🏽‍⚕️ **Médicos**: Generalistas, especialistas ou residentes, podendo ter múltiplas especialidades.
+- 🔎 **Consultas**: Registro de atendimentos com data, médico responsável, paciente e convênio.
+---
 
 ![Diagrama DER - Banco de Dados Hospital](./diagrama_1_bdd_hospital.jpg)
 
-<br>
+---
 
-<h1 align="center">🔐 PARTE 2 - Os Segredos do Hospital</h1>
-<br>
-<h3 align="center">E não era exatamente aquilo!</h3>
-<br>
-<p>Após a primeira versão do projeto de banco de dados para o sistema hospitalar, notou-se a necessidade de expansão das funcionalidades, incluindo alguns requisitos essenciais a essa versão do software. As funcionalidades em questão são para o controle na internação de pacientes. Será necessário expandir o Modelo ER desenvolvido e montar o banco de dados, criando as tabelas para o início dos testes.</p>
-<br>
+## ⚕️🌈 PARTE 2 - Expansão do Sistema
+
+Após a primeira versão, identificou-se a necessidade de novas funcionalidades, incluindo:
+
+### 📌 Controle de Internações
+- **Registro de pacientes internados**.
+- **Histórico de internações**.
+- **Gestão de quartos e leitos**.
+- **Monitoramento de tratamento e evolução clínica**.
+
+### 📌 Estrutura do Banco de Dados
+- Expandir o **Modelo ER** para suportar novas funções.
+- Criar **tabelas e testes iniciais** para validação.
+
+---
+
 <h3 align="center">Em Desenvolvimento...</h3>
+
+---
+
+## 🛠 Tecnologias Usadas
+- **DER**: [draw.io](https://www.drawio.com/)
+
+---
