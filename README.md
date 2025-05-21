@@ -6,7 +6,7 @@ Um pequeno hospital local busca desenvolver um novo sistema para gerenciar suas 
 
 ## 📌 Entidades Principais
 - 🩹 `Pacientes`: Dados Pessoais, Documentos e Convênio Médico;
-- 🧑🏽‍⚕️ `Médicos`: Generalistas, Especialistas ou Residentes, podendo ter Múltiplas Especialidades (Como Clínicos Gerais, Dermatologistas, Gastroenterologistas e Pediatras);
+- 🥼 `Médicos`: Generalistas, Especialistas ou Residentes, podendo ter Múltiplas Especialidades (Como Clínicos Gerais, Dermatologistas, Gastroenterologistas e Pediatras);
 - 🔎 `Consultas`: Registros de Atendimentos com Data, Médico Responsável, Paciente e Convênio.
 
 ---
