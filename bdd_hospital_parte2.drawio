@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0" version="27.0.6">
   <diagram name="Página-1" id="le3Gu0IzTsZb8OGJHYtN">
-    <mxGraphModel dx="1861" dy="1739" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="light-dark(#FFFFFF,#121212)" math="0" shadow="0">
+    <mxGraphModel dx="1654" dy="1625" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="light-dark(#FFFFFF,#121212)" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -154,7 +154,7 @@
         <mxCell id="_uafdIYoWCfrqkK-eHcZ-1" value="Enfermeiro" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="280" y="90" width="160" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="_uafdIYoWCfrqkK-eHcZ-2" value="Nome&lt;br&gt;CPF&lt;br&gt;CRE" style="align=center;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="_uafdIYoWCfrqkK-eHcZ-1" vertex="1">
+        <mxCell id="_uafdIYoWCfrqkK-eHcZ-2" value="Nome&lt;br&gt;CPF&lt;br&gt;COREN" style="align=center;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="_uafdIYoWCfrqkK-eHcZ-1" vertex="1">
           <mxGeometry y="50" width="160" height="70" as="geometry" />
         </mxCell>
         <mxCell id="_uafdIYoWCfrqkK-eHcZ-3" value="Uma internação está associada a 1 paciente e a 1 médico" style="shape=note;size=20;whiteSpace=wrap;html=1;" parent="1" vertex="1">
