@@ -28,7 +28,7 @@ A segunda versão do sistema introduziu funcionalidades essenciais para o **Cont
 
 ---
 
-![Diagrama DER - Banco de Dados Hospital - Parte 2](./)
+![Diagrama DER - Banco de Dados Hospital - Parte 2](./bdd_hospital_parte2.drawio.png)
 
 ---
 
