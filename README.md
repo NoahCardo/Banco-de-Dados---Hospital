@@ -15,7 +15,7 @@ Um pequeno hospital local busca desenvolver um novo sistema para gerenciar suas 
 
 ---
 
-## ⚕️🌈🚑 PARTE 2 - Expansão do Sistema
+## ⚕️🌈🚑 PARTE 2 - Os Segredos do Hospital
 
 ## 📌 Novos Requisitos
 A segunda versão do sistema introduziu funcionalidades essenciais para o **Controle de Internações**, incluindo:
@@ -33,6 +33,13 @@ A segunda versão do sistema introduziu funcionalidades essenciais para o **Cont
 ---
 
 ![Script SQL - Banco de Dados Hospital](./Banco_de_Dados_Script_SQL.png)
+
+---
+
+## ⚕️🌈🚑 PARTE 3 - O Prisioneiro dos Dados
+
+## 📌 Novos Requisitos
+Nesta etapa, o sistema hospitalar recebe os primeiros dados inseridos, garantindo que todas as tabelas estejam corretamente preenchidas para a operação do hospital.
 
 ---
 
