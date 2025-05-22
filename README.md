@@ -11,7 +11,7 @@ Um pequeno hospital local busca desenvolver um novo sistema para gerenciar suas 
 
 ---
 
-![Diagrama DER - Banco de Dados Hospital](./bbd_hospital_parte1.drawio.png)
+![Diagrama DER - Banco de Dados Hospital]()
 
 ---
 
