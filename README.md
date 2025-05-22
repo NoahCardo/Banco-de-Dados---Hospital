@@ -32,11 +32,16 @@ A segunda versão do sistema introduziu funcionalidades essenciais para o **Cont
 
 ---
 
+![Script SQL - Banco de Dados Hospital](./Banco_de_Dados_Script_SQL.png)
+
+---
+
 <h3 align="center">Em Desenvolvimento...</h3>
 
 ---
 
 ## 🛠 Tecnologias Usadas
 - **DER**: [draw.io](https://www.drawio.com/)
+- **Script SQL**: [dbdiagram.io](https://dbdiagram.io/)
 
 ---
