@@ -108,7 +108,7 @@ Armazena as receitas médicas emitidas pelos médicos.
 | relatorio_impresso | text        | Relatório impresso disponível     |
 | relatorio_virtual | text         | Relatório digital disponível      |
 
-## 👤 Novas Entidades!
+## ↓ 👤 Novas Entidades! ↓
 
 ### `Internação`
 Gerencia as internações hospitalares.
@@ -161,5 +161,5 @@ Nesta etapa, o sistema hospitalar recebe os primeiros dados inseridos, garantind
 ## 🛠 Tecnologias Usadas
 - **DER**: [draw.io](https://www.drawio.com/)
 - **Script SQL**: [dbdiagram.io](https://dbdiagram.io/)
-- **MySQL Workbench**: [Banco de Dados em MySQL](./Banco_de_Dados_Hospital_Script.sql) (Arquivo Presente Aqui!)
+- **MySQL Workbench**: [Banco de Dados em MySQL](./Banco_de_Dados_Hospital_Script.sql) (← Arquivo Presente Aqui!)
 ---
