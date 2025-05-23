@@ -2,7 +2,7 @@
 
 Um pequeno hospital local busca desenvolver um novo sistema para gerenciar suas operações, transferindo dados antigos armazenados em planilhas para um banco de dados estruturado. O objetivo é criar um **Diagrama Entidade-Relacionamento (DER)** adequado e expandir funcionalidades conforme necessário.
 
-## ⚕️🌈🚑 PARTE 1 - O Hospital Fundamental - Modelagem Inicial
+## ⚕️🌈🚑 PARTE 1 - O Hospital Fundamental: Modelagem Inicial
 
 ## 📌 Entidades Principais
 - 🩹 `Pacientes`: Dados Pessoais, Documentos e Convênio Médico;
@@ -15,7 +15,7 @@ Um pequeno hospital local busca desenvolver um novo sistema para gerenciar suas 
 
 ---
 
-## ⚕️🌈🚑 PARTE 2 - Os Segredos do Hospital - Expandindo o Banco de Dados
+## ⚕️🌈🚑 PARTE 2 - Os Segredos do Hospital: Expandindo o Banco de Dados
 
 ## 📌 Novos Requisitos
 A segunda versão do sistema introduziu funcionalidades essenciais para o **Controle de Internações**, incluindo:
@@ -147,7 +147,7 @@ Registra os quartos disponíveis no hospital.
 
 ---
 
-## ⚕️🌈🚑 PARTE 3 - O Prisioneiro dos Dados - Alimentando o Banco de Dados
+## ⚕️🌈🚑 PARTE 3 - O Prisioneiro dos Dados: Alimentando o Banco de Dados
 
 ## 📌 Novos Requisitos
 Nesta etapa, o sistema hospitalar recebe os primeiros dados inseridos, garantindo que todas as tabelas estejam corretamente preenchidas para a operação do hospital.
