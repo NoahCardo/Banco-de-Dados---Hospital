@@ -32,7 +32,7 @@ A segunda versão do sistema introduziu funcionalidades essenciais para o **Cont
 
 ---
 
-![Script SQL - Banco de Dados Hospital](./)
+![Script SQL - Banco de Dados Hospital](./Banco_de_Dados_Hospital_Script.png)
 
 ---
 
