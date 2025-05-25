@@ -322,5 +322,5 @@ WHERE id_medicos NOT IN (3, 7);
 ## 🛠 Tecnologias Usadas
 - **DER**: [draw.io](https://www.drawio.com/)
 - **Script SQL**: [dbdiagram.io](https://dbdiagram.io/)
-- **MySQL Workbench**:
+- **MySQL Workbench**
 ---
