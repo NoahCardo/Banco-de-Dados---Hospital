@@ -47,6 +47,7 @@ Armazena os dados dos médicos.
 | nome       | varchar(255)  | Nome completo do médico                       |
 | cpf        | varchar(14)   | Cadastro de Pessoa Física (CPF) - único       |
 | crm        | varchar(20)   | Registro do Conselho Regional de Medicina (CRM) |
+| especialidade | varchar(255) | Especialidade médica |
 
 ### `Consultas`
 Registra as consultas médicas realizadas.
@@ -72,6 +73,7 @@ Registra os pacientes atendidos pelo hospital.
 | data_nasc   | date        | Data de nascimento                      |
 | endereco    | varchar(255)| Endereço do paciente                    |
 | telefone    | varchar(15) | Telefone para contato                   |
+| email_pac   | varchar(255) | E-mail do paciente                      |
 
 ### `Convênio`
 Armazena os dados dos convênios aceitos pelo hospital.
