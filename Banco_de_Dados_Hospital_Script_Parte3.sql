@@ -133,21 +133,21 @@ INSERT INTO Médicos (id_medicos, nome, cpf, crm, id_especialidade, id_convenio)
 
 -- Inserindo Dados na Tabela "Pacientes"
 INSERT INTO Pacientes (id_pacientes, nome, cpf, rg, data_nasc, endereco, telefone, email_pac, id_convenio) VALUES
-(1, "Gabriel S. Assis Borges", "701.610.171-18", "22152533-3", "1996-02-26", "Rua TiLa, 25 - Rio de Janeiro/SP", "(51) 957369-1921", "gabriel.s.assis.borges40@outlook.com", 1),
+(1, "Gabriel S. Assis Borges", "701.610.171-18", "22152533-3", "1996-02-26", "Rua TiLa, 25 - Rio de Janeiro/SP", "(51) 957369-1921", "gabriel.s.assis.borges40@outlook.com", NULL),
 (2, "Bruno Assis Borges", "476.563.921-57", "04498229-7", "1999-04-19", "Rua TiLa, 25 - Rio de Janeiro/SP", "(21) 976007-6828", "bruno.assis.borges59@yahoo.com.br", NULL),
-(3, "Gabriel N. Assis Borges", "365.601.754-99", "12651482-8", "1996-05-17", "Rua TiLa, 25 - Rio de Janeiro/SP", "(51) 993313-5481", "gabriel.n.assis.borges50@outlook.com", 1),
+(3, "Gabriel N. Assis Borges", "365.601.754-99", "12651482-8", "1996-05-17", "Rua TiLa, 25 - Rio de Janeiro/SP", "(51) 993313-5481", "gabriel.n.assis.borges50@outlook.com", NULL),
 (4, "Mayan Rocha Reis", "103.253.527-04", "27896977-3", "2006-07-17", "Avenida Nitro, 775 - Curitiba/BA", "(11) 981905-5020", "mayan.rocha.reis52@gmail.com", 2),
 (5, "Samuel Cobra Souza", "528.034.098-79", "90374367-8", "1996-11-18", "Avenida Gatorion, 199 - São Paulo/RS", "(11) 919286-5673", "samuel.cobra.souza89@hotmail.com", 1),
 (6, "Isabelly Aisha Marques", "085.149.006-92", "55217528-9", "2015-04-22", "Travessa Ponto Norte, 128 - Rio de Janeiro/RJ", "(11) 914898-5288", "isabelly.aisha.marques76@gmail.com", 3),
 (7, "Matheus Pereira Nascimento", "676.900.735-57", "09314041-6", "1982-09-27", "Alameda TechSyn, 607 - Curitiba/RS", "(31) 995979-1392", "matheus.pereira.nascimento89@hotmail.com", 3),
 (8, "Lucas Quispe Junior", "838.590.646-06", "87987235-4", "1980-03-12", "Travessa Polibee, 161 - São Paulo/PR", "(31) 976802-5229", "lucas.quispe.junior71@hotmail.com", 4),
 (9, "Andrey Ordalio Ribeiro", "349.802.413-28", "50133018-6", "1996-07-14", "Alameda Zeelus, 923 - Salvador/SP", "(41) 969906-2284", "andrey.ordalio.ribeiro22@outlook.com", 2),
-(10, "Juliana Santos Lima", "483.785.919-48", "91715458-8", "1996-09-06", "Alameda BloodLink, 46 - São Paulo/SP", "(21) 939547-6016", "juliana.santos.lima23@gmail.com", NULL),
+(10, "Juliana Santos Lima", "483.785.919-48", "91715458-8", "1996-09-06", "Alameda BloodLink, 46 - São Paulo/SP", "(21) 939547-6016", "juliana.santos.lima23@gmail.com", 1),
 (11, "Manoel Vieira Ribeiro", "131.291.015-19", "41318584-8", "2001-01-19", "Travessa Acaiacá, 56 - Salvador/PR", "(11) 926926-1589", "manoel.vieira.ribeiro20@outlook.com", 5),
-(12, "Joel Brenno Choque Almeida", "749.900.667-07", "34359119-6", "1992-12-15", "Alameda Acenis, 608 - Belo Horizonte/RJ", "(31) 951422-3519", "joel.brenno.choque.almeida16@outlook.com", NULL),
-(13, "Isaac Junior Lopes", "213.898.242-41", "55431596-3", "1986-11-04", "Travessa MedGur, 617 - Rio de Janeiro/BA", "(11) 928850-7018", "isaac.junior.lopes59@yahoo.com.br", NULL),
-(14, "Suzana Araujo Muniz", "203.715.509-39", "58783797-2", "2000-05-13", "Avenida BrailleWay, 118 - Belo Horizonte/RJ", "(11) 980446-7993", "suzana.araujo.muniz3@gmail.com", NULL),
-(15, "Maikon Padula Alvarenga", "094.366.227-32", "02094857-0", "1995-03-21", "Avenida Lume, 23 - Curitiba/RS", "(41) 961680-6957", "maikon.padula.alvarenga70@gmail.com", NULL);
+(12, "Joel Brenno Choque Almeida", "749.900.667-07", "34359119-6", "1992-12-15", "Alameda Acenis, 608 - Belo Horizonte/RJ", "(31) 951422-3519", "joel.brenno.choque.almeida16@outlook.com", 5),
+(13, "Isaac Junior Lopes", "213.898.242-41", "55431596-3", "1986-11-04", "Travessa MedGur, 617 - Rio de Janeiro/BA", "(11) 928850-7018", "isaac.junior.lopes59@yahoo.com.br", 3),
+(14, "Suzana Araujo Muniz", "203.715.509-39", "58783797-2", "2000-05-13", "Avenida BrailleWay, 118 - Belo Horizonte/RJ", "(11) 980446-7993", "suzana.araujo.muniz3@gmail.com", 5),
+(15, "Maikon Padula Alvarenga", "094.366.227-32", "02094857-0", "1995-03-21", "Avenida Lume, 23 - Curitiba/RS", "(41) 961680-6957", "maikon.padula.alvarenga70@gmail.com", 2);
 
 -- Inserindo Dados na Tabela "Consultas"
 INSERT INTO Consultas (id_consultas, data_e_hora_cnslt, id_medicos, valor, num_da_carteira, especialidade_desejada, fk_pacientes, id_convenio) VALUES
