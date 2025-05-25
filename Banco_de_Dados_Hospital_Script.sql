@@ -1,3 +1,6 @@
+CREATE DATABASE IF NOT EXISTS Banco_de_Dados_Hospital_Script;
+USE Banco_de_Dados_Hospital_Script;
+
 CREATE TABLE `Médicos` (
   `id_medicos` integer PRIMARY KEY,
   `nome` varchar(255),
