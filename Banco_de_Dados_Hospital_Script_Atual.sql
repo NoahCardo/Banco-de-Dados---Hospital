@@ -237,3 +237,18 @@ INSERT INTO Receitas_do_Médico (id_receitas, med_rctds, quant_med, instruções
 (18, 'Maleato de enalapril 10mg', 1, 'Tomar 1 comprimido pela manhã', 'Relatório impresso da consulta 18', 'relatorio18.pdf', 18),
 (19, 'Cloridrato de metformina 850mg', 1, 'Tomar 1 comprimido após o almoço', 'Relatório impresso da consulta 19', 'relatorio19.pdf', 19),
 (20, 'Cloridrato de fluoxetina 20mg', 1, 'Tomar 1 comprimido pela manhã', 'Relatório impresso da consulta 20', 'relatorio20.pdf', 20);
+
+-- --------------- Parte 4 ---------------
+
+ALTER TABLE Médicos 
+ADD COLUMN em_atividade BOOLEAN DEFAULT TRUE;
+
+-- Médicos Inativos
+UPDATE Médicos 
+SET em_atividade = FALSE 
+WHERE id_medicos IN (3, 7);
+
+-- Médicos Ativos
+UPDATE Médicos 
+SET em_atividade = TRUE 
+WHERE id_medicos NOT IN (3, 7);
