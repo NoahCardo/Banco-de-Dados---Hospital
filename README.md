@@ -36,6 +36,10 @@ A segunda versão do sistema introduziu funcionalidades essenciais para o **Cont
 
 ---
 
+## 🐬 Arquivo .sql Referente à Parte 2: [Banco de Dados em MySQL - Parte 2](./Banco_de_Dados_Hospital_Script_Parte2.sql)
+
+---
+
 ## 📋 Entidades (Em Tabelas)
 
 ### `Médicos`
@@ -171,7 +175,111 @@ Nesta etapa, o sistema hospitalar recebe os primeiros dados inseridos, garantind
 - Inclua dados de dez profissionais de enfermaria. Associe cada internação a ao menos dois enfermeiros.
 - Os dados de tipo de quarto, convênio e especialidade são essenciais para a operação do sistema e, portanto, devem ser povoados assim que o sistema for instalado.
 
+---
+
 ## 🐬 Arquivo .sql Referente à Parte 3: [Banco de Dados em MySQL - Parte 3](./Banco_de_Dados_Hospital_Script_Parte3.sql)
+
+---
+
+## 📋 Entidades (Em Tabelas) Atualizadas
+
+### `Médicos`
+| Campo          | Tipo          | Descrição                                        |
+|--------------|--------------|--------------------------------------------------|
+| id_medicos   | integer [PK]  | Identificador único do médico                    |
+| nome         | varchar(255)  | Nome completo do médico                          |
+| cpf          | varchar(14)   | Cadastro de Pessoa Física (CPF) - único         |
+| crm          | varchar(20)   | Registro do Conselho Regional de Medicina (CRM) |
+| id_especialidade | integer  | Identificador da especialidade médica           |
+| id_convenio  | integer       | Identificador do convênio associado              |
+
+### `Consultas`
+| Campo               | Tipo          | Descrição                                      |
+|---------------------|--------------|----------------------------------------------|
+| id_consultas       | integer [PK]  | Identificador único da consulta               |
+| data_e_hora_cnslt  | DATETIME      | Data e hora da consulta                       |
+| id_medicos         | integer       | Identificador do médico responsável           |
+| valor              | DECIMAL       | Valor da consulta                            |
+| num_da_carteira    | varchar(15)   | Número da carteira do convênio - único       |
+| especialidade_desejada | integer  | Identificador da especialidade médica         |
+| fk_pacientes       | integer       | Identificador do paciente                     |
+| id_convenio        | integer       | Identificador do convênio associado           |
+
+### `Pacientes`
+| Campo          | Tipo          | Descrição                                        |
+|--------------|--------------|--------------------------------------------------|
+| id_pacientes | integer [PK]  | Identificador único do paciente                  |
+| nome         | varchar(255)  | Nome completo do paciente                        |
+| cpf          | varchar(14)   | Cadastro de Pessoa Física (CPF) - único         |
+| rg           | varchar(12)   | Registro Geral (RG)                             |
+| data_nasc    | DATE          | Data de nascimento                              |
+| endereco     | varchar(255)  | Endereço completo                               |
+| telefone     | varchar(15)   | Número de telefone                              |
+| email_pac    | varchar(255)  | E-mail do paciente                              |
+| id_convenio  | integer       | Identificador do convênio associado              |
+
+### `Convênio`
+| Campo          | Tipo          | Descrição                                         |
+|--------------|--------------|--------------------------------------------------|
+| id_convenio  | integer [PK]  | Identificador único do convênio                  |
+| nome_conv    | varchar(255) | Nome do convênio médico                          |
+| cnpj_conv    | varchar(18)  | CNPJ do convênio - único                         |
+| tempo_de_carencia | DATE     | Tempo de carência para utilização                |
+
+### `Especialistas`
+| Campo              | Tipo          | Descrição                                         |
+|--------------------|--------------|--------------------------------------------------|
+| id_especialidade  | integer [PK]  | Identificador único da especialidade             |
+| nome_especialidade | varchar(255) | Nome da especialidade médica                     |
+
+### `Receitas_do_Médico`
+| Campo           | Tipo          | Descrição                                     |
+|---------------|--------------|---------------------------------------------|
+| id_receitas   | integer [PK]  | Identificador único da receita médica       |
+| med_rctds     | TEXT          | Medicamentos receitados                     |
+| quant_med     | INT           | Quantidade de medicamentos                  |
+| instruções_uso | TEXT         | Instruções de uso dos medicamentos          |
+| relatorio_impresso | TEXT     | Relatório impresso                          |
+| relatorio_virtual | TEXT      | Relatório digital                           |
+| id_consultas  | integer       | Identificador da consulta associada         |
+
+### `Internação`
+| Campo        | Tipo          | Descrição                                    |
+|------------|--------------|--------------------------------------------|
+| id_internacao | integer [PK]  | Identificador único da internação           |
+| id_medicos  | integer       | Identificador do médico responsável         |
+| id_pacientes | integer       | Identificador do paciente internado        |
+| id_enfermeiro | integer      | Identificador do enfermeiro responsável    |
+| data_entrada | DATETIME      | Data e hora de entrada                      |
+| previsao_alta | DATE         | Data prevista para alta                     |
+| data_alta   | DATE          | Data real da alta                           |
+| procedimento | TEXT          | Procedimentos realizados                    |
+| id_quarto   | integer       | Identificador do quarto onde ocorreu a internação |
+
+### `Enfermeiro`
+| Campo        | Tipo          | Descrição                                    |
+|------------|--------------|--------------------------------------------|
+| id_enfermeiro | integer [PK]  | Identificador único do enfermeiro          |
+| nome        | varchar(255)  | Nome completo do enfermeiro                |
+| cpf         | varchar(14)   | Cadastro de Pessoa Física (CPF) - único    |
+| coren       | varchar(15)   | Registro no Conselho Regional de Enfermagem |
+
+### `Quarto`
+| Campo           | Tipo          | Descrição                                     |
+|---------------|--------------|---------------------------------------------|
+| id_quarto     | integer [PK]  | Identificador único do quarto               |
+| numero        | INT           | Número do quarto                            |
+| tipo_de_quarto | varchar(255) | Categoria do quarto (apartamento, enfermaria) |
+| descricao     | TEXT          | Detalhes sobre o quarto                     |
+| valor_diar    | DECIMAL       | Valor diário cobrado                         |
+
+## ↓ 👤 Novas Entidades! ↓
+
+### `Internação_Enfermeiro`
+| Campo           | Tipo          | Descrição                                |
+|---------------|--------------|----------------------------------------|
+| id_internacao | integer [FK]  | Identificador da internação             |
+| id_enfermeiro | integer [FK]  | Identificador do enfermeiro associado   |
 
 ---
 
