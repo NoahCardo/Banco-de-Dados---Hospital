@@ -197,9 +197,9 @@ Nesta etapa, o sistema hospitalar recebe os primeiros dados inseridos, garantind
 | Campo               | Tipo          | Descrição                                      |
 |---------------------|--------------|----------------------------------------------|
 | id_consultas       | integer [PK]  | Identificador único da consulta               |
-| data_e_hora_cnslt  | DATETIME      | Data e hora da consulta                       |
+| data_e_hora_cnslt  | Ddatetime     | Data e hora da consulta                       |
 | id_medicos         | integer       | Identificador do médico responsável           |
-| valor              | DECIMAL       | Valor da consulta                            |
+| valor              | decimal       | Valor da consulta                            |
 | num_da_carteira    | varchar(15)   | Número da carteira do convênio - único       |
 | especialidade_desejada | integer  | Identificador da especialidade médica         |
 | fk_pacientes       | integer       | Identificador do paciente                     |
@@ -212,7 +212,7 @@ Nesta etapa, o sistema hospitalar recebe os primeiros dados inseridos, garantind
 | nome         | varchar(255)  | Nome completo do paciente                        |
 | cpf          | varchar(14)   | Cadastro de Pessoa Física (CPF) - único         |
 | rg           | varchar(12)   | Registro Geral (RG)                             |
-| data_nasc    | DATE          | Data de nascimento                              |
+| data_nasc    | date          | Data de nascimento                              |
 | endereco     | varchar(255)  | Endereço completo                               |
 | telefone     | varchar(15)   | Número de telefone                              |
 | email_pac    | varchar(255)  | E-mail do paciente                              |
@@ -224,7 +224,7 @@ Nesta etapa, o sistema hospitalar recebe os primeiros dados inseridos, garantind
 | id_convenio  | integer [PK]  | Identificador único do convênio                  |
 | nome_conv    | varchar(255) | Nome do convênio médico                          |
 | cnpj_conv    | varchar(18)  | CNPJ do convênio - único                         |
-| tempo_de_carencia | DATE     | Tempo de carência para utilização                |
+| tempo_de_carencia | date     | Tempo de carência para utilização                |
 
 ### `Especialistas`
 | Campo              | Tipo          | Descrição                                         |
@@ -236,11 +236,11 @@ Nesta etapa, o sistema hospitalar recebe os primeiros dados inseridos, garantind
 | Campo           | Tipo          | Descrição                                     |
 |---------------|--------------|---------------------------------------------|
 | id_receitas   | integer [PK]  | Identificador único da receita médica       |
-| med_rctds     | TEXT          | Medicamentos receitados                     |
-| quant_med     | INT           | Quantidade de medicamentos                  |
-| instruções_uso | TEXT         | Instruções de uso dos medicamentos          |
-| relatorio_impresso | TEXT     | Relatório impresso                          |
-| relatorio_virtual | TEXT      | Relatório digital                           |
+| med_rctds     | text          | Medicamentos receitados                     |
+| quant_med     | int           | Quantidade de medicamentos                  |
+| instruções_uso | text         | Instruções de uso dos medicamentos          |
+| relatorio_impresso | text     | Relatório impresso                          |
+| relatorio_virtual | text      | Relatório digital                           |
 | id_consultas  | integer       | Identificador da consulta associada         |
 
 ### `Internação`
@@ -250,10 +250,10 @@ Nesta etapa, o sistema hospitalar recebe os primeiros dados inseridos, garantind
 | id_medicos  | integer       | Identificador do médico responsável         |
 | id_pacientes | integer       | Identificador do paciente internado        |
 | id_enfermeiro | integer      | Identificador do enfermeiro responsável    |
-| data_entrada | DATETIME      | Data e hora de entrada                      |
-| previsao_alta | DATE         | Data prevista para alta                     |
-| data_alta   | DATE          | Data real da alta                           |
-| procedimento | TEXT          | Procedimentos realizados                    |
+| data_entrada | datetime      | Data e hora de entrada                      |
+| previsao_alta | date         | Data prevista para alta                     |
+| data_alta   | date          | Data real da alta                           |
+| procedimento | text          | Procedimentos realizados                    |
 | id_quarto   | integer       | Identificador do quarto onde ocorreu a internação |
 
 ### `Enfermeiro`
@@ -268,10 +268,10 @@ Nesta etapa, o sistema hospitalar recebe os primeiros dados inseridos, garantind
 | Campo           | Tipo          | Descrição                                     |
 |---------------|--------------|---------------------------------------------|
 | id_quarto     | integer [PK]  | Identificador único do quarto               |
-| numero        | INT           | Número do quarto                            |
+| numero        | int           | Número do quarto                            |
 | tipo_de_quarto | varchar(255) | Categoria do quarto (apartamento, enfermaria) |
-| descricao     | TEXT          | Detalhes sobre o quarto                     |
-| valor_diar    | DECIMAL       | Valor diário cobrado                         |
+| descricao     | text          | Detalhes sobre o quarto                     |
+| valor_diar    | decimal       | Valor diário cobrado                         |
 
 ## ↓ 👤 Novas Entidades! ↓
 
@@ -280,6 +280,10 @@ Nesta etapa, o sistema hospitalar recebe os primeiros dados inseridos, garantind
 |---------------|--------------|----------------------------------------|
 | id_internacao | integer [FK]  | Identificador da internação             |
 | id_enfermeiro | integer [FK]  | Identificador do enfermeiro associado   |
+
+---
+
+## ⚕️🌈🚑 PARTE 4 - O Prisioneiro dos Dados: Alimentando o Banco de Dados
 
 ---
 
