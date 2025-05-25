@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS Banco_de_Dados_Hospital_Script;
-USE Banco_de_Dados_Hospital_Script;
+CREATE DATABASE IF NOT EXISTS Banco_de_Dados_Hospital_Script_Parte2;
+USE Banco_de_Dados_Hospital_Script_Parte2;
 
 CREATE TABLE `Médicos` (
   `id_medicos` integer PRIMARY KEY,
