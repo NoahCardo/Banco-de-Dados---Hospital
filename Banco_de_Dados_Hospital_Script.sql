@@ -2,7 +2,8 @@ CREATE TABLE `Médicos` (
   `id_medicos` integer PRIMARY KEY,
   `nome` varchar(255),
   `cpf` varchar(14) UNIQUE,
-  `crm` varchar(20) UNIQUE COMMENT 'O chamado "CRM Médico" é um Registro que Todo Profissional de Medicina Precisa Ter para Atuar no Brasil.'
+  `crm` varchar(20) UNIQUE COMMENT 'O chamado "CRM Médico" é um Registro que Todo Profissional de Medicina Precisa Ter para Atuar no Brasil.',
+  `especialidade` varchar(255)
 );
 
 CREATE TABLE `Consultas` (
@@ -21,7 +22,8 @@ CREATE TABLE `Pacientes` (
   `rg` varchar(12),
   `data_nasc` date,
   `endereco` varchar(255),
-  `telefone` varchar(15)
+  `telefone` varchar(15),
+  `email_pac` varchar(255)
 );
 
 CREATE TABLE `Convênio` (
@@ -65,7 +67,7 @@ CREATE TABLE `Enfermeiro` (
   `id_enfermeiro` integer PRIMARY KEY,
   `nome` varchar(255),
   `cpf` varchar(14) UNIQUE,
-  `coren` varchar(15) UNIQUE COMMENT 'O chamado "COREN" (Conselho Regional de Enfermagem) é um Registro Obrigatório para Enfermeiros, Garantindo que Estejam Habilitados a Atuar no Brasil.'
+  `coren` varchar(15) UNIQUE COMMENT 'O chamado "COREN" é um Registro Obrigatório para Enfermeiros, Garantindo que Estejam Habilitados a Atuar no Brasil.'
 );
 
 CREATE TABLE `Quarto` (
@@ -83,6 +85,8 @@ ALTER TABLE `Internação` ADD FOREIGN KEY (`id_pacientes`) REFERENCES `Paciente
 ALTER TABLE `Internação` ADD FOREIGN KEY (`id_enfermeiro`) REFERENCES `Enfermeiro` (`id_enfermeiro`);
 
 ALTER TABLE `Médicos` ADD FOREIGN KEY (`id_medicos`) REFERENCES `Consultas` (`id_consultas`);
+
+ALTER TABLE `Médicos` ADD FOREIGN KEY (`especialidade`) REFERENCES `Especialistas` (`id_especialidade`);
 
 ALTER TABLE `Consultas` ADD FOREIGN KEY (`id_consultas`) REFERENCES `Pacientes` (`id_pacientes`);
 
