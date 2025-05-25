@@ -283,7 +283,7 @@ Nesta etapa, o sistema hospitalar recebe os primeiros dados inseridos, garantind
 
 ---
 
-## ⚕️🌈🚑 PARTE 4 - O Prisioneiro dos Dados: Alimentando o Banco de Dados
+## ⚕️🌈🚑 PARTE 4 - 
 
 ---
 
