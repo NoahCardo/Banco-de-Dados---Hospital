@@ -177,7 +177,7 @@ Nesta etapa, o sistema hospitalar recebe os primeiros dados inseridos, garantind
 
 ---
 
-## 🐬 Arquivo .sql Referente à Parte 3: [Banco de Dados em MySQL - Parte 3](./Banco_de_Dados_Hospital_Script_Parte3.sql)
+## 🐬 Arquivo .sql Referente à Parte 3: [Banco de Dados em MySQL - Parte 3](./Banco_de_Dados_Hospital_Script_Atual.sql)
 
 ---
 
