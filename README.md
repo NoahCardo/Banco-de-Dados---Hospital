@@ -286,14 +286,36 @@ Nesta etapa, o sistema hospitalar recebe os primeiros dados inseridos, garantind
 ## ⚕️🌈🚑 PARTE 4 - A Ordem do Alterar: Alterando o Banco de Dados
 
 ## 📌 Novos Requisitos
-Nesta etapa, o sistema hospitalar passará por algumas atualizações em seus dados, garantindo um gerenciamento mais eficiente dos médicos atuantes no hospital.
-Para isso, Adicionar uma coluna em_atividade na tabela Médicos, indicando se o médico está ativo ou inativo no hospital. Atualizar ao menos dois médicos como inativos e os demais como ativos.
+Nesta etapa, o sistema hospitalar passará por algumas atualizações em seus dados, garantindo um gerenciamento mais eficiente dos médicos de seu hospital.
+Para isso, será necessário adicionar ao banco de dados um indicativo para registrar se os médicos ainda estão atuando no hospital ou não; além disso, será preciso atualizar os registros existentes, marcando ao menos dois médicos como inativos e os demais como ativos.
 
+### Demonstração:
 
+```
+ALTER TABLE Médicos 
+ADD COLUMN em_atividade BOOLEAN DEFAULT TRUE;
+
+-- Médicos Inativos
+UPDATE Médicos 
+SET em_atividade = FALSE 
+WHERE id_medicos IN (3, 7);
+
+-- Médicos Ativos
+UPDATE Médicos 
+SET em_atividade = TRUE 
+WHERE id_medicos NOT IN (3, 7);
+```
 
 ---
 
-<h3 align="center">Em Desenvolvimento...</h3>
+## 🐬 Arquivo .sql Referente à Parte 4: [Banco de Dados em MySQL - Parte 3](./Banco_de_Dados_Hospital_Script_Atual.sql)
+
+---
+
+## ⚕️🌈🚑 PARTE 5 - As Relíquias dos Dados: Consultas
+
+## 📌 Novos Requisitos
+
 
 ---
 
