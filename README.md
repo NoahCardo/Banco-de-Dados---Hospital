@@ -197,7 +197,7 @@ Nesta etapa, o sistema hospitalar recebe os primeiros dados inseridos, garantind
 | Campo               | Tipo          | Descrição                                      |
 |---------------------|--------------|----------------------------------------------|
 | id_consultas       | integer [PK]  | Identificador único da consulta               |
-| data_e_hora_cnslt  | Ddatetime     | Data e hora da consulta                       |
+| data_e_hora_cnslt  | datetime     | Data e hora da consulta                       |
 | id_medicos         | integer       | Identificador do médico responsável           |
 | valor              | decimal       | Valor da consulta                            |
 | num_da_carteira    | varchar(15)   | Número da carteira do convênio - único       |
@@ -287,7 +287,7 @@ Nesta etapa, o sistema hospitalar recebe os primeiros dados inseridos, garantind
 
 ## 📌 Novos Requisitos
 Nesta etapa, o sistema hospitalar passará por algumas atualizações em seus dados, garantindo um gerenciamento mais eficiente dos médicos atuantes no hospital.
-Para isso, Adicionar uma coluna em_atividade na tabela Médicos, indicando se o médico está ativo ou inativo no hospital. ✅ Atualizar ao menos dois médicos como inativos e os demais como ativos.
+Para isso, Adicionar uma coluna em_atividade na tabela Médicos, indicando se o médico está ativo ou inativo no hospital. Atualizar ao menos dois médicos como inativos e os demais como ativos.
 
 
 
