@@ -1,4 +1,4 @@
-# 🏥 Criando um Banco de Dados para um Hospital
+# 🏥  Criando um Banco de Dados para um Hospital
 
 Um pequeno hospital local busca desenvolver um novo sistema para gerenciar suas operações, transferindo dados antigos armazenados em planilhas para um banco de dados estruturado. O objetivo é criar um **Diagrama Entidade-Relacionamento (DER)** adequado e expandir funcionalidades conforme necessário.
 
