@@ -317,7 +317,7 @@ WHERE id_medicos NOT IN (3, 7);
 ## 📌 Novos Requisitos
 Agora, por fim, com um banco bem estruturado e desenhado em mãos, é possível realizar testes, simulando relatórios ou telas que o sistema possa necessitar.
 
-##    Vamos Testar 11 Ocorrências Juntos?
+## ❗ Vamos Testar 11 Ocorrências Juntos?
 
 ### 1. Todos os dados e o valor médio das consultas do ano de 2020 e das que foram feitas sob convênio.
 
