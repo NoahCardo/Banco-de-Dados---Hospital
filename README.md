@@ -291,7 +291,7 @@ Para isso, será necessário adicionar ao banco de dados um indicativo para regi
 
 ### Demonstração:
 
-```
+```sql
 ALTER TABLE Médicos 
 ADD COLUMN em_atividade BOOLEAN DEFAULT TRUE;
 
@@ -321,7 +321,7 @@ Agora, por fim, com um banco bem estruturado e desenhado em mãos, é possível 
 
 ## 1. Todos os dados e o valor médio das consultas do ano de 2020 e das que foram feitas sob convênio.
 
-```
+```sql
 -- Valor médio das consultas do ano de 2020
 SELECT AVG(valor) AS media_2020
 FROM Consultas
@@ -335,13 +335,13 @@ WHERE id_convenio IS NOT NULL;
 
 ## 2. Todos os dados das internações que tiveram data de alta maior que a data prevista para a alta.
 
-```
+```sql
 SELECT * FROM Internação WHERE data_alta > previsao_alta;
 ```
 
 ## 3. Receituário completo da primeira consulta registrada com receituário associado.
 
-```
+```sql
 SELECT r.*
 FROM Receitas_do_Médico r
 JOIN Consultas c ON r.id_consultas = c.id_consultas
@@ -351,7 +351,7 @@ LIMIT 1;
 
 ## 4. Todos os dados da consulta de maior valor e também da de menor valor (ambas as consultas não foram realizadas sob convênio).
 
-```
+```sql
 -- Consultas sem convênio
 SELECT * FROM Consultas WHERE id_convenio IS NULL;
 
@@ -370,7 +370,7 @@ LIMIT 1;
 
 ## 5. Todos os dados das internações em seus respectivos quartos, calculando o total da internação a partir do valor de diária do quarto e o número de dias entre a entrada e a alta.
 
-```
+```sql
 SELECT i.*, q.valor_diar, 
        DATEDIFF(i.data_alta, DATE(i.data_entrada)) AS dias_internado,
        q.valor_diar * DATEDIFF(i.data_alta, DATE(i.data_entrada))) AS total_internacao
@@ -380,7 +380,7 @@ JOIN Quarto q ON i.id_quarto = q.id_quarto;
 
 ## 6. Data, procedimento e número de quarto de internações em quartos do tipo “apartamento”.
 
-```
+```sql
 SELECT i.data_entrada, i.procedimento, q.numero
 FROM Internação i
 JOIN Quarto q ON i.id_quarto = q.id_quarto
@@ -389,7 +389,7 @@ WHERE q.tipo_de_quarto = 'Apartamento';
 
 ## 7. Nome do paciente, data da consulta e especialidade de todas as consultas em que os pacientes eram menores de 18 anos na data da consulta e cuja especialidade não seja “pediatria”, ordenando por data de realização da consulta.
 
-```
+```sql
 SELECT p.nome AS paciente, c.data_e_hora_cnslt AS data_consulta, e.nome_especialidade AS especialidade
 FROM Consultas c
 JOIN Pacientes p ON c.fk_pacientes = p.id_pacientes
@@ -401,7 +401,7 @@ ORDER BY c.data_e_hora_cnslt;
 
 ## 8. Nome do paciente, nome do médico, data da internação e procedimentos das internações realizadas por médicos da especialidade “gastroenterologia”, que tenham acontecido em “enfermaria”.
 
-```
+```sql
 SELECT p.nome AS paciente, m.nome AS medico, i.data_entrada, i.procedimento
 FROM Internação i
 JOIN Médicos m ON i.id_medicos = m.id_medicos
@@ -414,7 +414,7 @@ AND q.tipo_de_quarto = 'Enfermaria';
 
 ## 9. Os nomes dos médicos, seus CRMs e a quantidade de consultas que cada um realizou.
 
-```
+```sql
 SELECT m.nome, m.crm, COUNT(c.id_consultas) AS quantidade_consultas
 FROM Médicos m
 LEFT JOIN Consultas c ON m.id_medicos = c.id_medicos
@@ -423,13 +423,13 @@ GROUP BY m.id_medicos, m.nome, m.crm;
 
 ## 10. Todos os médicos que tenham "Gabriel" no nome. 
 
-```
+```sql
 SELECT * FROM Médicos WHERE nome LIKE '%Gabriel%';
 ```
 
 ## 11. Os nomes, CREs e número de internações de enfermeiros que participaram de mais de uma internação.
 
-```
+```sql
 SELECT e.nome, e.coren, COUNT(ie.id_internacao) AS quantidade_internacoes
 FROM Enfermeiro e
 JOIN Internação_Enfermeiro ie ON e.id_enfermeiro = ie.id_enfermeiro
