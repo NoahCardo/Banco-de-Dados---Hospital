@@ -319,7 +319,7 @@ Agora, por fim, com um banco bem estruturado e desenhado em mãos, é possível 
 
 ## 🎲 Vamos Testar 11 Ocorrências Juntos?
 
-## 1. Todos os dados e o valor médio das consultas do ano de 2020 e das que foram feitas sob convênio.
+### 1. Todos os dados e o valor médio das consultas do ano de 2020 e das que foram feitas sob convênio.
 
 ```sql
 -- Valor médio das consultas do ano de 2020
@@ -333,13 +333,13 @@ FROM Consultas
 WHERE id_convenio IS NOT NULL;
 ```
 
-## 2. Todos os dados das internações que tiveram data de alta maior que a data prevista para a alta.
+### 2. Todos os dados das internações que tiveram data de alta maior que a data prevista para a alta.
 
 ```sql
 SELECT * FROM Internação WHERE data_alta > previsao_alta;
 ```
 
-## 3. Receituário completo da primeira consulta registrada com receituário associado.
+### 3. Receituário completo da primeira consulta registrada com receituário associado.
 
 ```sql
 SELECT r.*
@@ -349,7 +349,7 @@ ORDER BY c.data_e_hora_cnslt ASC
 LIMIT 1;
 ```
 
-## 4. Todos os dados da consulta de maior valor e também da de menor valor (ambas as consultas não foram realizadas sob convênio).
+### 4. Todos os dados da consulta de maior valor e também da de menor valor (ambas as consultas não foram realizadas sob convênio).
 
 ```sql
 -- Consultas sem convênio
@@ -368,7 +368,7 @@ ORDER BY valor ASC
 LIMIT 1;
 ```
 
-## 5. Todos os dados das internações em seus respectivos quartos, calculando o total da internação a partir do valor de diária do quarto e o número de dias entre a entrada e a alta.
+### 5. Todos os dados das internações em seus respectivos quartos, calculando o total da internação a partir do valor de diária do quarto e o número de dias entre a entrada e a alta.
 
 ```sql
 SELECT i.*, q.valor_diar, 
@@ -378,7 +378,7 @@ FROM Internação i
 JOIN Quarto q ON i.id_quarto = q.id_quarto;
 ```
 
-## 6. Data, procedimento e número de quarto de internações em quartos do tipo “apartamento”.
+### 6. Data, procedimento e número de quarto de internações em quartos do tipo “apartamento”.
 
 ```sql
 SELECT i.data_entrada, i.procedimento, q.numero
@@ -387,7 +387,7 @@ JOIN Quarto q ON i.id_quarto = q.id_quarto
 WHERE q.tipo_de_quarto = 'Apartamento';
 ```
 
-## 7. Nome do paciente, data da consulta e especialidade de todas as consultas em que os pacientes eram menores de 18 anos na data da consulta e cuja especialidade não seja “pediatria”, ordenando por data de realização da consulta.
+### 7. Nome do paciente, data da consulta e especialidade de todas as consultas em que os pacientes eram menores de 18 anos na data da consulta e cuja especialidade não seja “pediatria”, ordenando por data de realização da consulta.
 
 ```sql
 SELECT p.nome AS paciente, c.data_e_hora_cnslt AS data_consulta, e.nome_especialidade AS especialidade
@@ -399,7 +399,7 @@ AND e.nome_especialidade != 'Pediatria'
 ORDER BY c.data_e_hora_cnslt;
 ```
 
-## 8. Nome do paciente, nome do médico, data da internação e procedimentos das internações realizadas por médicos da especialidade “gastroenterologia”, que tenham acontecido em “enfermaria”.
+### 8. Nome do paciente, nome do médico, data da internação e procedimentos das internações realizadas por médicos da especialidade “gastroenterologia”, que tenham acontecido em “enfermaria”.
 
 ```sql
 SELECT p.nome AS paciente, m.nome AS medico, i.data_entrada, i.procedimento
@@ -412,7 +412,7 @@ WHERE e.nome_especialidade = 'Gastroenterologia'
 AND q.tipo_de_quarto = 'Enfermaria';
 ```
 
-## 9. Os nomes dos médicos, seus CRMs e a quantidade de consultas que cada um realizou.
+### 9. Os nomes dos médicos, seus CRMs e a quantidade de consultas que cada um realizou.
 
 ```sql
 SELECT m.nome, m.crm, COUNT(c.id_consultas) AS quantidade_consultas
@@ -421,13 +421,13 @@ LEFT JOIN Consultas c ON m.id_medicos = c.id_medicos
 GROUP BY m.id_medicos, m.nome, m.crm;
 ```
 
-## 10. Todos os médicos que tenham "Gabriel" no nome. 
+### 10. Todos os médicos que tenham "Gabriel" no nome. 
 
 ```sql
 SELECT * FROM Médicos WHERE nome LIKE '%Gabriel%';
 ```
 
-## 11. Os nomes, CREs e número de internações de enfermeiros que participaram de mais de uma internação.
+### 11. Os nomes, CREs e número de internações de enfermeiros que participaram de mais de uma internação.
 
 ```sql
 SELECT e.nome, e.coren, COUNT(ie.id_internacao) AS quantidade_internacoes
