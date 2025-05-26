@@ -18,7 +18,7 @@ Um pequeno hospital local busca desenvolver um novo sistema para gerenciar suas 
 ## ⚕️🌈🚑 PARTE 2 - Os Segredos do Hospital: Expandindo o Banco de Dados
 
 ## 📌 Novos Requisitos
-A segunda versão do sistema introduziu funcionalidades essenciais para o **Controle de Internações**, incluindo:
+A segunda versão do sistema introduziu funcionalidades essenciais para o controle de internações, incluindo:
 - 🗓️ `Internação`: Registro de Data de Entrada, Data de Previsão de Alta, Data de Alta e Procedimento;
 - 🧑🏽‍⚕️ `Enfermeiro`: Controle dos Enfermeiros responsáveis pela internação, incluindo Nome, CPF e Registro no Conselho de Enfermagem (COREN ou CRE);
 - 🛏️ `Quarto`: Vinculação da Internação a um Quarto específico, com Número e Tipo do Quarto (Com Descrição e Valor da Diária).
